@@ -1,0 +1,890 @@
+@import url(animate.css);
+@import url(http:\\maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@import url(http:\\fonts.googleapis.com/css?family=Open+Sans:300,400);
+/*========================================================
+                      Main Styles
+=========================================================*/
+body {
+  color: #bfbfbf;
+  font: 400 14px/24px "Open Sans", sans-serif;
+  -webkit-text-size-adjust: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2, h4 {
+  text-transform: uppercase;
+}
+
+h1, h4, h6 {
+  color: #43464c;
+}
+
+h2, h3, h5 {
+  color: #FFF;
+}
+
+h1 {
+  font: 300 76px/76px "Open Sans", sans-serif;
+}
+
+h2 {
+  font: 300 100px/100px "Open Sans", sans-serif;
+}
+
+h3 {
+  font: 300 80px/80px "Open Sans", sans-serif;
+}
+
+h4 {
+  font: 300 50px/50px "Open Sans", sans-serif;
+}
+
+h5 {
+  font: 300 40px/40px "Open Sans", sans-serif;
+}
+h5 a:hover {
+  color: #43464c;
+}
+h5 a:active {
+  color: #2b2d31;
+}
+
+h6 {
+  font: 300 25px/25px "Open Sans", sans-serif;
+}
+h6 a:hover {
+  color: #F2D13B;
+}
+h6 a:active, h6 a .primary:active {
+  color: #bb9b0c;
+}
+
+em {
+  font: 300 60px/60px "Open Sans", sans-serif;
+  color: #FFF;
+}
+
+p a:hover, .marked-list a:hover, .list a:hover {
+  text-decoration: underline;
+}
+p .fa, .marked-list .fa, .list .fa {
+  text-decoration: none;
+}
+
+time {
+  display: block;
+  text-align: center;
+  font: 300 30px/30px "Open Sans", sans-serif;
+  color: #FFF;
+}
+time span {
+  left: 0;
+  right: 0;
+}
+time > span:first-child {
+  position: absolute;
+  top: 0;
+  height: 60.3%;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background: #F2D13B;
+}
+time > span:last-child {
+  position: absolute;
+  top: 60.3%;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 15px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: #838892;
+  background: #43464c;
+}
+time .vertical-content {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a:focus {
+  outline: none;
+}
+a:active {
+  background-color: transparent;
+}
+
+a[href^="tel:"],
+a[href^="callto:"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  display: block;
+  }
+
+.fa {
+  line-height: inherit;
+}
+
+[class*='fa-']:before {
+  font-weight: 400;
+  font-family: "FontAwesome";
+}
+
+.page {
+  overflow: hidden;
+  min-height: 500px;
+}
+.lt-ie9 .page {
+  min-width: 1200px;
+}
+
+/*=======================================================
+                       Main Layout
+=========================================================*/
+.off {
+  margin-top: 16px;
+}
+
+.off1 {
+  margin-top: 0;
+}
+
+.row-off1 {
+  margin-top: 8px;
+}
+
+.icon + h5, .row-off, em + a {
+  margin-top: 38px;
+}
+
+* + .unit-wr_txt, .img-wr + h6 {
+  margin-top: 45px;
+}
+
+h6 + p, h4 + h2 {
+  margin-top: 22px;
+}
+
+/*=======================================================
+                        Components
+=========================================================*/
+/*==================     Brand     ======================*/
+.brand {
+  display: inline-block;
+  text-align: left;
+}
+.brand_slogan {
+  font-size: 19px;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+.brand_name {
+  display: inline-block;
+}
+.brand_logo {
+  position: relative;
+}
+.brand_logo:before {
+  position: absolute;
+  width: 137px;
+  text-align: center;
+  font-size: 68px;
+  line-height: 137px;
+  color: #FFF;
+  top: 6px;
+  left: -164px;
+  z-index: 1;
+}
+.brand_logo:after {
+  position: absolute;
+  content: '';
+  width: 137px;
+  height: 137px;
+  border-radius: 50%;
+  background: #F2D13B;
+  z-index: 0;
+  top: 0;
+  left: -165px;
+}
+
+/*==================  Backgrounds  ======================*/
+.bg-default {
+  background: #f8f8f8;
+}
+
+.bg-primary {
+  background: #F2D13B;
+}
+
+.bg-primary-1 {
+  background: #ff3399;
+}
+
+.bg-primary-2 {
+  background: #96ca2d;
+}
+
+.bg-secondary {
+  background: #43464c;
+}
+
+.bg-img {
+  background-image: url("../images/page-1_img09-.png");
+  background-repeat: repeat repeat;
+}
+
+/*==================    Colors    ======================*/
+.primary {
+  color: #F2D13B;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.primary-1 {
+  color: #ff3399;
+}
+
+.primary-2 {
+  color: #96ca2d;
+}
+
+.default {
+  color: #FFF;
+}
+
+/*==================     Icons     ======================*/
+/*==================    Buttons    ======================*/
+.btn {
+  display: inline-block;
+  color: #FFF;
+}
+.btn:hover {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+}
+.btn_bg {
+  font-size: 52px;
+  line-height: 53px;
+  background: #F2D13B;
+  padding: 51px 55px;
+  border-radius: 25%;
+}
+.btn_bg:active {
+  background: #eac310;
+}
+.btn_sm {
+  font-size: 45px;
+  line-height: 60px;
+  padding: 26px 30px 26px 35px;
+  background: #43464c;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 35%;
+}
+.btn_sm-1:active {
+  background: #00a5aa;
+}
+.btn_sm-2:active {
+  background: #eac310;
+}
+.btn_sm-3:active {
+  background: #77a024;
+}
+
+[class*='btn_sm-'] {
+  font-size: 28px;
+  line-height: 29px;
+  padding: 27px 30px;
+  border-radius: 25%;
+}
+[class*='btn_sm-']:hover {
+  box-shadow: none;
+}
+
+/*==================      Box      ======================*/
+.box:before, .box:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.box:after {
+  clear: both;
+}
+.box_aside {
+  float: left;
+}
+.box_right {
+  float: right;
+}
+.box_cnt__no-flow {
+  overflow: hidden;
+}
+
+/*==================     ToTop     ======================*/
+.toTop {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 46px;
+  color: #fff;
+  background: #F2D13B;
+  border-radius: 50%;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: none;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 20;
+}
+.toTop:hover {
+  color: #fff;
+  background: #F2D13B;
+  text-decoration: none;
+}
+
+.mobile .toTop,
+.tablet .toTop {
+  display: none !important;
+}
+
+/*==================  RD Parallax    ======================*/
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+.parallax_image, .parallax_pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-position: center center;
+  will-change: transform;
+}
+.parallax_image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax_pattern {
+  background-repeat: repeat;
+}
+.parallax_cnt {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .parallax_md .box_aside, .parallax_md .box_right {
+    float: none;
+  }
+  .parallax_md .box_right {
+    margin-top: 40px;
+  }
+}
+/*========================================================
+                     HEADER  Section
+=========================================================*/
+header {
+  text-align: center;
+  padding: 123px 0;
+}
+header .brand {
+  padding-left: 182px;
+}
+
+/*========================================================
+                     CONTENT  Section
+=========================================================*/
+main {
+  display: block;
+}
+
+/*==================      Well     ======================*/
+.well {
+  padding: 190px 0;
+}
+
+.well-1 {
+  padding: 85px 0 129px;
+}
+
+.well-1__off {
+  padding-bottom: 87px;
+}
+
+.well-2 {
+  padding: 79px 0 56px;
+}
+
+.well-3 {
+  padding: 127px 0 122px;
+}
+
+.well-4 {
+  padding: 180px 0 198px;
+}
+
+/*================== Primary Font ======================*/
+.primary-font {
+  font-size: 20px;
+}
+
+/*==================     Title   ======================*/
+.title {
+  font: 300 60px/60px "Open Sans", sans-serif;
+  text-transform: none;
+}
+
+/*==================     Upper  ======================*/
+.upper {
+  text-transform: uppercase;
+}
+
+/*==================  Hovers  ======================*/
+/*==================     Indent    ======================*/
+.indent {
+  margin: 53px 0 0 70px;
+}
+
+/*==================   Unit Wrap  ======================*/
+.unit-wr {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  background: #FFF;
+  border-radius: 40px;
+  padding-bottom: 96px;
+}
+.unit-wr_txt {
+  text-align: left;
+  padding: 0 68px;
+}
+.unit-wr [class*='unit-wr_bg'] {
+  padding: 76px 0 39px;
+  border-radius: 40px;
+}
+.unit-wr_bg {
+  background: #F2D13B;
+}
+.unit-wr_bg1 {
+  background: #ff3399;
+}
+.unit-wr_bg2 {
+  background: #96ca2d;
+}
+.unit-wr_btn {
+  position: absolute;
+  content: '';
+  left: 50%;
+  margin-left: -40px;
+  top: 100%;
+  margin-top: 42px;
+}
+.unit-wr [class*='btn_sm-'] {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+}
+.unit-wr:hover .fa-clock-o:before {
+  color: #00D6DD;
+}
+.unit-wr:hover .fa-group:before {
+  color: #F2D13B;
+}
+.unit-wr:hover .fa-comments-o:before {
+  color: #96ca2d;
+}
+
+/*==================   Icon  ======================*/
+.icon {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 137px;
+  height: 137px;
+  background: #43464c;
+  border-radius: 40px;
+}
+.icon:before {
+  font-size: 60px;
+  line-height: 137px;
+  color: #FFF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/*==================   Icon Wrap  ======================*/
+.icon-wr {
+  position: relative;
+  padding-left: 216px;
+}
+.icon-wr:before {
+  position: absolute;
+  content: '\f003';
+  font-family: 'FontAwesome';
+  font-size: 174px;
+  line-height: 174px;
+  color: #F2D13B;
+  top: -10px;
+  left: 0;
+}
+
+/*==================   Img Wrap  ======================*/
+.img-wr {
+  position: relative;
+}
+.img-wr img {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+.img-wr time {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 70px;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+/*==================     Event    ======================*/
+.event {
+  position: relative;
+}
+.event img {
+  border-radius: 40px;
+  width: 100%;
+}
+.event_overlay {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: -10px;
+}
+
+/*========================================================
+                     FOOTER  Styles
+=========================================================*/
+footer {
+  padding: 68px 0;
+  background: #2d2f33;
+}
+footer h1 {
+  color: #FFF;
+  font-size: 55px;
+  line-height: 55px;
+}
+footer .brand {
+  margin-left: 118px;
+}
+footer .brand_logo:before {
+  width: 99px;
+  height: 99px;
+  font-size: 50px;
+  line-height: 99px;
+  left: -117px;
+}
+footer .brand_logo:after {
+  width: 99px;
+  height: 99px;
+  top: 0;
+  left: -117px;
+}
+footer .brand_slogan {
+  font-size: 14px;
+  line-height: 14px;
+}
+footer .privacy {
+  margin: 26px 0 0 37px;
+}
+
+/*==================     Privacy    ======================*/
+.privacy {
+  display: inline-block;
+  font-weight: 600;
+  color: #667185;
+}
+
+/*==================   Social list  ======================*/
+.social-list > li {
+  display: inline-block;
+  text-align: center;
+}
+.social-list > li a {
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  background: #43464c;
+  border-radius: 50%;
+}
+.social-list > li a:before {
+  color: #FFF;
+  font-size: 25px;
+  line-height: 78px;
+}
+.social-list > li a:hover {
+  background: #F2D13B;
+}
+.social-list li + li {
+  margin-left: 15px;
+}
+
+/*========================================================
+                     RESPONSIVE
+=========================================================*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  h6 {
+    font-size: 24px;
+  }
+
+  .unit-wr_txt {
+    padding: 0 30px;
+  }
+
+  time span:first-child {
+    padding: 14px 12px 15px;
+  }
+  time span:last-child {
+    padding: 14px 16px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .unit-wr {
+    padding-bottom: 70px;
+  }
+  .unit-wr [class*="unit-wr_bg"] {
+    padding-top: 30px;
+  }
+  .unit-wr_txt {
+    padding: 0 20px;
+  }
+
+  * + .unit-wr_txt {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h3 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  h5 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .icon {
+    width: 120px;
+    height: 120px;
+  }
+  .icon:before {
+    font-size: 50px;
+    line-height: 120px;
+  }
+
+  .event_overlay {
+    margin-top: -40px;
+  }
+  .event_overlay em {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  time {
+    font-size: 25px;
+    line-height: 27px;
+  }
+  time span:first-child {
+    padding: 10px 20px;
+  }
+  time span:last-child {
+    padding: 10px 20px;
+  }
+
+  .social-list > li a {
+    width: 60px;
+    height: 60px;
+  }
+  .social-list > li a:before {
+    line-height: 60px;
+  }
+  .social-list li + li {
+    margin-left: 4px;
+  }
+
+  .col-fix .col-sm-6:nth-child(2n-1) {
+    clear: both;
+  }
+}
+@media (max-width: 767px) {
+  header, footer, [class*='well'] {
+    padding: 60px 0;
+  }
+
+  h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  h3 {
+    font-size: 34px;
+    line-height: 34px;
+  }
+
+  h4 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  h5 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  em {
+    font-size: 39px;
+    line-height: 40px;
+  }
+
+  header h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+  header .brand {
+    padding-left: 100px;
+  }
+  header .brand_logo:before {
+    width: 99px;
+    height: 99px;
+    font-size: 50px;
+    line-height: 99px;
+    left: -90%;
+  }
+  header .brand_logo:after {
+    width: 99px;
+    height: 99px;
+    top: 0;
+    left: -90%;
+    margin-left: 16px;
+  }
+  header .brand_slogan {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .img-wr time {
+    min-width: 100px;
+  }
+
+  .icon-wr {
+    padding-left: 116px;
+  }
+  .icon-wr:before {
+    top: -54px;
+    font-size: 80px;
+  }
+
+  .off1 {
+    margin-top: 30px;
+  }
+
+  * + .row {
+    margin-top: 0;
+  }
+
+  .col-off {
+    margin-top: 80px;
+  }
+
+  .btn_bg {
+    padding: 30px 35px;
+    font-size: 30px;
+    line-height: 31px;
+  }
+
+  .event_overlay {
+    margin-top: -40px;
+  }
+
+  footer {
+    text-align: center;
+  }
+  footer .box_aside, footer .box_right {
+    float: none;
+  }
+  footer .box_aside {
+    margin-top: 30px;
+  }
+  footer .privacy {
+    display: block;
+    margin: 30px 0 0 0;
+  }
+}
+@media (max-width: 479px) {
+  h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .indent {
+    margin: 0;
+  }
+
+  .icon-wr {
+    padding-left: 75px;
+  }
+  .icon-wr:before {
+    top: 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+blockquote {
+        font-family: Georgia, "Times new roman", Times;
+        font-style: italic;
+        
+        color: #333;
+        width: 75%;
+        border-left: 5px solid #ddd;
+        padding-left: 25px;
+        position: relative;
+}

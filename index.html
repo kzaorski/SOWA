@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>UNIWEREK</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/google-map.css"/>
+<link rel="stylesheet" href="css/grid.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src='js/device.min.js'></script>
+
+
+<style>
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(F,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+		border: 2;
+	}
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+		overflow: auto;
+	}
+
+	.modalDialog > div {
+		width: 50%;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		}
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #00d9ff; }
+	</style>
+
+</head>
+<body>
+<div class="page">
+ 
+<header>
+<img src="images/univereklogo_przezroczystetło.png" alt="Uniwerek" class="img-responsive center-block" width=100% />
+</header>
+ 
+<main>
+<section class="parallax parallax_md well" data-url="images/WitamyNaStronie.jpg" data-mobile="true" data-speed="1">
+<div class="container">
+<div class="box">
+<div class="box_aside off wow fadeInUp" data-wow-delay="0.5s">
+<em>WITAMY NA STRONIE KLUBU DZIECIĘCEGO<br><br>„UNIWEREK” <br><br>
+ZNAJDZIESZ NAS W KORTOWIE</em>
+</div>
+</div>
+</div>
+</section>
+<section class="parallax well-3" data-url="images/parallax3.jpg" data-mobile="true" data-speed="1">
+<div class="container">
+<div class="row">
+<div class="col-md-12 wow fadeIn" data-wow-delay="0.5s">
+<div class="indent">
+<h2>CO OFERUJEMY</h2><br><br>
+<h5><p>opiekę wykwalifikowanej kadry nad dziećmi od 1. do 3. roku życia</p><br>
+<p>zajęcia wychowawcze i edukacyjne uwzględniające rozwój psychomotoryczny dziecka</p><br>
+<p>wyżywienie zgodne z normami fizjologicznymi</p><br></h5>
+</div>
+</div>
+<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 wow fadeIn" data-wow-delay="0.4s">
+</div>
+</div>
+</section>
+<section class="bg-default well-1">
+<div class="container">
+<div class="row">
+
+<div class="col-sm-4 col-off wow fadeInLeft animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+<div class="unit-wr">
+<div class="unit-wr_bg1">
+<div class="icon fa-comments">
+</div>
+<h5>DLACZEGO MY</h5>
+</div>
+<div class="unit-wr_txt">
+<h5 class="primary-font primary-1">
+<a href='#openModal1'>Dlaczego My</a>
+</h5>
+<p>Zapewniamy Maluchom jak najlepszą opiekę, spokojną i przyjazną atmosferę, w której odkrywamy Małego – Wielkiego Człowieka.</p>
+</div>
+<div class="unit-wr_btn">
+<a href="#openModal1" class="btn btn_sm-1 bg-primary-1 fa-file-text"></a>
+</div>
+</div>
+</div>
+
+<div id="openModal1" class="modalDialog">
+	<div style="color: #333">
+		<a href="#close" title="Close" class="close">X</a>
+		<h6 class="primary-font primary-1">Dlaczego My</h6>
+
+		<p style="text-align: justify">Z radością pragniemy zaprosić Państwa do nowo powstałego Klubu Dziecięcego „Uniwerek” dla dzieci od 1. roku życia (jeżeli rozwój psychomotoryczny dziecka na to pozwala) do ukończenia roku szkolnego, w którym dziecko ukończy 3. rok życia lub w przypadku, gdy niemożliwe lub utrudnione jest objęcie dziecka wychowaniem przedszkolnym – 4. roku życia.</p>
+		<p style="text-align: justify">Placówka powstał dzięki porozumieniu dwóch podmiotów: Stowarzyszenia Oświata – Wychowanie – Aktywizacja „SOWA” i Uniwersytetu Warmińsko-Mazurskiego w Olsztynie.</p>
+		<p style="text-align: justify">Naszym wspólnym celem stało się stworzenie przyjaznego, kameralnego miejsca o wysokim standardzie, spełniającego potrzeby i oczekiwania Maluchów oraz Was Rodziców.</p> 
+        <p style="text-align: justify">Pragniemy wspierać studentów, doktorantów oraz pracowników akademickich w profesjonalnej opiece i mądrym wychowaniu ich Pociech.</p>
+        <p style="text-align: justify">Wiemy, jak trudno łączyć naukę i pracę z rodzicielstwem, dlatego to szczególnie do Was kierujemy naszą ofertę.</p>
+        <p style="text-align: justify">To właśnie Wasze Pociechy mają pierwszeństwo w procesie rekrutacji, a z pomocą funduszy z Resortowego programu rozwoju instytucji opieki nad dziećmi w wieku do lat 3 „MALUCH” – edycja 2016, stało się to możliwe po bardzo przystępnej cenie. Abonament miesięczny wynosi 400 zł.</p>
+        <p style="text-align: justify">To duża szansa dla Was Rodziców – studentów, doktorantów i pracowników akademickich, – którzy chcecie łączyć naukę i pracę z rodzicielstwem.</p>
+	</div>
+</div>
+<div id="openModal2" class="modalDialog">
+	<div style="color: #333">
+		<a href="#close" title="Close" class="close">X</a>
+		<h6 class="primary-font primary">Kim jesteśmy</h6>
+		<p style="text-align: justify">Pracą Klubu kierują dwie młode, ambitne mamy, które same niedawno doświadczyły wyzwania, jakim jest łączenie rodzicielstwa z pracą naukową: <b>Anna Godlewska-Zaorska</b> oraz <b>Bernadetta Olender-Jermacz</b>.</p>
+        <blockquote>
+		  <p style="text-align: justify">Jako osoby od lat związane z Uniwersytetem Warmińsko-Mazurskim w Olsztynie (absolwentki kierunku pedagogika, poszerzające swoje kompetencje w ramach studiów doktoranckich), korzystając z zasobów Uczelni stworzyłyśmy na jej terenie miejsce opieki dla najmłodszych – Klub Dziecięcy „Uniwerek”.</p>
+          <p>Kadrę Klubu stanowi zespół wysoce wykwalifikowanych, kreatywnych i cierpliwych opiekunów. Ciepła atmosfera, indywidulne podejście do dziecka sprawiają, że Maluchy czują się u nas dobrze.</p>
+          <p style="text-align: justify">„Uniwerek” tworzą ludzie z pasją, o wielkich sercach, dla których praca z najmłodszymi to powołanie.</p>
+        </blockquote>
+	</div>
+</div>
+<div id="openModal3" class="modalDialog">
+	<div style="color: #333">
+		<a href="#close" title="Close" class="close">X</a>
+		<h6 class="primary-font primary-1">Jak pracujemy</h6>
+		<p style="text-align: justify">W naszym Klubie zdajemy sobie sprawę, że dziecko jest cudem, jedynym, wyjątkowym i niezastąpionym.
+		Wskazując na jego otwartość, ciekawość świata, radość eksperymentowania i potrzebę komunikowania się z otoczeniem uwzględniliśmy zajęcia, które obejmują rozwój fizyczny, intelektualny, emocjonalny i społeczny oraz wiele innych obszarów.</p>
+		<p style="text-align: justify">Zajęcia prowadzone są w sposób naturalny, zgodnie z możliwościami i potrzebami dzieci.
+		Program zawiera bazę zabaw i gier, które dostarczają dziecku radość, ale mają również swój cel – uczą.
+		Proponowane metody i techniki pracy zapewniają aktywny udział dzieci w nauce. Wykorzystują zabawę, ruch i dużą wrażliwość dziecka na bodźce. Przecież Maluch poznaje najbliższe otoczenie wszystkimi zmysłami!
+		Zakładamy użycie rysunków, kart z obrazkami, plansz, plakatów. Pragniemy nauczyć dzieci słuchania i obserwacji poprzez czytanie ciekawych książek, słuchanie muzyki, słuchowisk i doświadczanie przygód. Stawiamy na swobodną, nieskrępowaną, twórczą, typową dla wieku dziecięcego zabawę.</p>
+<br>
+<p style="text-align: justify">Uważamy, że stałe czynności w rozkładzie dnia dają zarówno dziecku jak i opiekunowi poczucie bezpieczeństwa, pod warunkiem, że wypływają z naturalnego rytmu dnia, a nie sztucznych regulacji. Dlatego też dostosowujemy się do potrzeb Malucha. Uwzględniamy również potrzebę ruchu na świeżym powietrzu i kiedy to możliwe korzystamy ze sprzyjających warunków atmosferycznych. Rytm życia w Klubie uwzględnia konieczność przeplatania zajęć: zajęcia o mniejszej i większej intensywności ruchu, swobodne i zaplanowane, w pomieszczeniach i na powietrzu.</p>
+<dl><br>
+<li>7.30 Kukuryku – czas zacząć</li>
+<li>7.30-8.00 Wesołe dzień dobry – schodzenie się dzieci, zabawy integracyjne na dzień dobry</li>
+<li>8.00-8.30 Pląsy i podskoki – zabawy ruchowe przy muzyce</li>
+<li>8.30-9.00 Śniadanie – przygotowanie do śniadania, wspólny posiłek</li>
+<li>9.00-9.30 ABC w toalecie – przyswajanie przez dzieci nawyków higienicznych, nocnikowanie</li>
+<li>9.30-10.30 Radosny czas zabawy – zabawy swobodne według inicjatywy Maluchów</li>
+<li>10.30-11.30 Ucząc bawić, bawiąc uczyć – zabawy edukacyjne i ogólnorozwojowe</li>
+<li>11.30-12.00 Obiad – przygotowanie do obiadu, wspólny posiłek</li>
+<li>12.00-14.00 Sjesta – zajęcia relaksacyjne przy łagodnej muzyce, odpoczynek, drzemka</li>
+<li>14.00-14.30 Podwieczorek – przygotowanie do podwieczorku, wspólny posiłek</li>
+<li>14.30-15.30 Radosny czas zabawy – zabawy swobodne według inicjatywy Maluchów</li>
+<li>15.30 Pa, pa – do zobaczenia</li>
+</dl>
+	</div>
+</div>
+<div class="col-sm-4 col-off wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+<div class="unit-wr">
+<div class="unit-wr_bg">
+<div class="icon fa-users">
+</div>
+<h5>KIM JESTEŚMY</h5>
+</div>
+<div class="unit-wr_txt">
+<h5 class="primary-font primary">
+<a href='#openModal2'>Kim jesteśmy</a>
+</h5>
+<p>Miejsce tworzą ludzie i to od nich zależy bezpieczeństwo i uśmiech dzieci.</p><p>&nbsp;</p><p>&nbsp;</p>
+</div>
+<div class="unit-wr_btn">
+<a href="#openModal2" class="btn btn_sm-2 bg-primary fa-file-text"></a>
+</div>
+</div>
+</div>
+<div class="col-sm-4 col-off wow fadeInLeft animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+<div class="unit-wr">
+<div class="unit-wr_bg2">
+<div class="icon fa-question">
+</div>
+<h5>JAK PRACUJEMY</h5>
+</div>
+<div class="unit-wr_txt">
+<h5 class="primary-font primary-2">
+<a href='#openModal3'>Jak pracujemy</a>
+</h5>
+<p>Wspieramy proces odkrywania oraz stopniowego przejmowania inicjatywy przez dziecko. Pobudzamy samodzielność!</p>
+<p>&nbsp;</p>
+</div>
+<div class="unit-wr_btn">
+<a href="#openModal3" class="btn btn_sm-3 bg-primary-2 fa-file-text"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="parallax parallax_md well" data-url="images/DajemyMaluchomMozliwoscSmakowaniaSwiata.jpg" data-mobile="true" data-speed="1">
+<div class="container">
+<div class="box">
+<div class="box_aside off wow fadeInUp" data-wow-delay="0.5s">
+<em>DAJEMY MALUCHOM MOŻLIWOŚĆ SMAKOWANIA ŚWIATA!</em>
+</div>
+</div>
+</div>
+</section>
+<section class="well-2">
+<div class="container">
+<h4 class="title">KONCEPCJA<br>
+</h4>
+<div class="row row-off col-fix">
+<div class="col-md-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.2s">
+<div class="img-wr">
+<img src="images/ZadbalismyOProfesjonalnaKoncepcje.jpg" alt=""/>
+
+</div>
+<h6>
+<span class="primary">Zadbaliśmy o profesjonalną koncepcję pracy</span><br>
+</h6>
+<p>Założenia programu oparte są na dyskursie konstruktywistyczno-społecznym. Wiele inspiracji czerpaliśmy z Programu Zabaw FundaMentalnych oraz Teorii Inteligencji Wielorakich Howarda Gardnera.</p>
+</div>
+<div class="col-md-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.4s">
+<div class="img-wr">
+<img src="images/StworzylismyUniwerk.jpg" alt=""/>
+</div>
+<h6>
+<span class="primary">Stworzyliśmy „Uniwerek” z myślą o najpełniejszym rozwoju Maluchów</span>
+</h6>
+<p>Tworzymy kameralne środowisko dostosowane do potrzeb piętnaściorga dzieci. Dbamy o bezpieczeństwo, funkcjonalność i higienę otoczenia dzieci.</p>
+</div>
+<div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.6s">
+<div class="img-wr">
+<img src="images/WspolnieDziałamyNaRzeczDziecka.jpg" alt=""/>
+</div>
+<h6>
+<span class="primary">Wspólne działamy na rzecz dziecka</span><br>
+</h6>
+<p>Uważamy, że kontakty z Rodzicami powinny być oparte na wzajemnym zaufaniu i zrozumieniu. Zapewniamy informacje na temat koncepcji pracy Klubu, postępów dziecka i ewentualnych trudności.</p>
+</div>
+<div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.8s">
+<div class="img-wr">
+<img src="images/WspomagamyProcesUczeniaSiePrzezZabawe.jpg" alt=""/>
+</div>
+<h6>
+<span class="primary">Wspomagamy proces uczenia się przez zabawę</span>
+</h6>
+<p>Wprowadziliśmy stymulujące otoczenie: materiały i pomoce dydaktyczne zachęcające dzieci do podejmowania wielokierunkowej aktywności.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-default well-1 well-1__off">
+<div class="container">
+<div class="row">
+<div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+<div class="event">
+<img src="images/DwieRaczkiMam.jpg" alt=""/>
+<div class="event_overlay">
+<em>Dwie rączki mam<br>zajęcia plastyczno-techniczne</em>
+</div>
+</div>
+</div>
+<div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+<div class="event">
+<img src="images/MuzykaDlaSmyka.jpg" alt=""/>
+<div class="event_overlay">
+<em>Muzyka dla Smyka<br>zajęcia muzyczno-ruchowe</em>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6 off1 wow fadeIn" data-wow-delay="0.6s">
+<div class="event">
+<img src="images/CiszkiSyczkiSzumki.jpg" alt=""/>
+<div class="event_overlay">
+<em>Ciszki, syczki, szumki<br>zajęcia logopedyczne</em>
+</div>
+</div>
+</div>
+<div class="col-sm-6 off1 wow fadeIn" data-wow-delay="0.8s">
+<div class="event">
+<img src="images/EntliczekPentliczek.jpg" alt=""/>
+<div class="event_overlay">
+<em>Entliczek-pentliczek<br>zajęcia literackie, małe formy teatralne</em>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="parallax well-4" data-url="images/parallax4.jpg" data-mobile="true" data-speed="1">
+<div class="container">
+<div class="row row-off1 wow fadeIn" data-wow-delay="0.4s">
+<div class="col-sm-6">
+<h6 class="primary upper">SKONTAKTUJ SIĘ Z NAMI I DOWIEDZ SIĘ WIĘCEJ!</h6>
+
+<p>ADRESY</p>
+ul. Michała Oczapowskiego 9<br>
+10-719 Olsztyn<br>
+tel. +48 532 604 007<br>
+e-mail uniwerekolsztyn@gmail.com
+<p>GODZINY PRACY</p>
+7.30-15.30
+
+</div>
+</div>
+</div>
+</section>
+
+<div class="map">
+<div id="google-map" class="map_model"></div>
+<ul class="map_locations">
+<li data-y="53.755473" data-x="20.459818">
+<p><span>UNIWEREK</span></p>
+</li>
+</ul>
+</div>
+
+</main>
+ 
+<footer>
+<div class="container">
+<div class="box">
+<div class="box_right">
+<ul class="social-list">
+
+<li>
+<a href='https://www.facebook.com/uniwerekolsztyn' class="fa-facebook-f"></a>
+</li>
+</ul>
+</div>
+<div class="box_aside">
+<div class="brand ">
+<h1 class="brand_name">
+<a href="./" class="brand_logo fa-child">
+UNIWEREK
+</a>
+</h1>
+<p class="brand_slogan">
+Klub Dziecięcy
+</p>
+</div>
+<span class="privacy">© <span id="copyright-year"></span> |
+All Rights Reserved
+ </span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="js/main.js"></script>
+
+</script>
+</body> 
+</html>
