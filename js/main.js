@@ -40,7 +40,7 @@ function isIE() {
 (function ($) {
     var o = document.getElementById("google-map");
     if (o) {
-        include('https://maps.google.com/maps/api/js?sensor=false');
+        include('//maps.google.com/maps/api/js?sensor=false');
         include('js/jquery.rd-google-map.js');
 
         $(document).ready(function () {
