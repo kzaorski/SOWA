@@ -40,8 +40,8 @@ function isIE() {
 (function ($) {
     var o = document.getElementById("google-map");
     if (o) {
-        /*include('//maps.google.com/maps/api/js?sensor=false');*/
-        include('//maps.googleapis.com/maps/api/js?key=AIzaSyAIHVl-6mpjahsx219BNVPZcLDF7SBtv_U&callback=initMap');
+        include('//maps.google.com/maps/api/js?sensor=false');
+        /*include('//maps.googleapis.com/maps/api/js?key=AIzaSyAIHVl-6mpjahsx219BNVPZcLDF7SBtv_U&callback=initMap');*/
         
         include('js/jquery.rd-google-map.js');
 
