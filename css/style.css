@@ -1,9 +1,6 @@
 @import url(animate.css);
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400);
-/*========================================================
-                      Main Styles
-=========================================================*/
 body {
   color: #555555;
   font: 400 14px/24px "Open Sans", sans-serif;
@@ -56,62 +53,11 @@ h5 a:active {
 h6 {
   font: 300 25px/25px "Open Sans", sans-serif;
 }
-h6 a:hover {
-  color: #F2D13B;
-}
-h6 a:active, h6 a .primary:active {
-  color: #bb9b0c;
-}
-
 em {
   font: 300 40px/40px "Open Sans", sans-serif;
   color: #FFF;
-}
-
-p a:hover, .marked-list a:hover, .list a:hover {
-  text-decoration: underline;
-}
-p .fa, .marked-list .fa, .list .fa {
-  text-decoration: none;
-}
-
-time {
   display: block;
-  text-align: center;
-  font: 300 30px/30px "Open Sans", sans-serif;
-  color: #FFF;
 }
-time span {
-  left: 0;
-  right: 0;
-}
-time > span:first-child {
-  position: absolute;
-  top: 0;
-  height: 60.3%;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-  background: #F2D13B;
-}
-time > span:last-child {
-  position: absolute;
-  top: 60.3%;
-  bottom: 0;
-  font-size: 14px;
-  line-height: 15px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  color: #838892;
-  background: #43464c;
-}
-time .vertical-content {
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 a {
   font: inherit;
   color: inherit;
@@ -125,49 +71,16 @@ a:focus {
 a:active {
   background-color: transparent;
 }
-
-a[href^="tel:"],
-a[href^="callto:"] {
-  color: inherit;
-  text-decoration: none;
-}
-
-strong {
-  font-weight: 700;
-}
-
-em {
-  display: block;
-  }
-
-.fa {
-  line-height: inherit;
-}
-
-[class*='fa-']:before {
-  font-weight: 400;
-  font-family: "FontAwesome";
-}
-
 .page {
   overflow: hidden;
   min-height: 500px;
 }
-.lt-ie9 .page {
-  min-width: 1200px;
-}
-
-/*=======================================================
-                       Main Layout
-=========================================================*/
 .off {
   margin-top: 16px;
 }
-
 .off1 {
   margin-top: 0;
 }
-
 .row-off1 {
   margin-top: 8px;
 }
@@ -183,11 +96,6 @@ em {
 h6 + p, h4 + h2 {
   margin-top: 22px;
 }
-
-/*=======================================================
-                        Components
-=========================================================*/
-/*==================     Brand     ======================*/
 .brand {
   display: inline-block;
   text-align: left;
@@ -227,8 +135,6 @@ h6 + p, h4 + h2 {
   top: 0;
   left: -165px;
 }
-
-/*==================  Backgrounds  ======================*/
 .bg-default {
   background: #f8f8f8;
 }
@@ -245,16 +151,6 @@ h6 + p, h4 + h2 {
   background: #96ca2d;
 }
 
-.bg-secondary {
-  background: #43464c;
-}
-
-.bg-img {
-  background-image: url("../images/page-1_img09-.png");
-  background-repeat: repeat repeat;
-}
-
-/*==================    Colors    ======================*/
 .primary {
   color: #F2D13B;
   -webkit-transition: 0.3s;
@@ -285,25 +181,6 @@ h6 + p, h4 + h2 {
           transform: translateY(-5px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
 }
-.btn_bg {
-  font-size: 52px;
-  line-height: 53px;
-  background: #F2D13B;
-  padding: 51px 55px;
-  border-radius: 25%;
-}
-.btn_bg:active {
-  background: #eac310;
-}
-.btn_sm {
-  font-size: 45px;
-  line-height: 60px;
-  padding: 26px 30px 26px 35px;
-  background: #43464c;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 35%;
-}
 .btn_sm-1:active {
   background: #00a5aa;
 }
@@ -313,18 +190,6 @@ h6 + p, h4 + h2 {
 .btn_sm-3:active {
   background: #77a024;
 }
-
-[class*='btn_sm-'] {
-  font-size: 28px;
-  line-height: 29px;
-  padding: 27px 30px;
-  border-radius: 25%;
-}
-[class*='btn_sm-']:hover {
-  box-shadow: none;
-}
-
-/*==================      Box      ======================*/
 .box:before, .box:after {
   display: table;
   content: "";
@@ -339,41 +204,6 @@ h6 + p, h4 + h2 {
 .box_right {
   float: right;
 }
-.box_cnt__no-flow {
-  overflow: hidden;
-}
-
-/*==================     ToTop     ======================*/
-.toTop {
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  line-height: 46px;
-  color: #fff;
-  background: #F2D13B;
-  border-radius: 50%;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
-  position: fixed;
-  right: 40px;
-  bottom: 40px;
-  display: none;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  z-index: 20;
-}
-.toTop:hover {
-  color: #fff;
-  background: #F2D13B;
-  text-decoration: none;
-}
-
-.mobile .toTop,
-.tablet .toTop {
-  display: none !important;
-}
-
-/*==================  RD Parallax    ======================*/
 .parallax {
   position: relative;
   overflow: hidden;
@@ -391,9 +221,6 @@ h6 + p, h4 + h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.parallax_pattern {
-  background-repeat: repeat;
-}
 .parallax_cnt {
   position: relative;
 }
@@ -406,20 +233,11 @@ h6 + p, h4 + h2 {
     margin-top: 40px;
   }
 }
-/*========================================================
-                     HEADER  Section
-=========================================================*/
 header {
   text-align: center;
   padding: 123px 0;
 }
-header .brand {
-  padding-left: 182px;
-}
 
-/*========================================================
-                     CONTENT  Section
-=========================================================*/
 main {
   display: block;
 }
