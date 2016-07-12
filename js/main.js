@@ -41,18 +41,14 @@ function isIE() {
     var o = document.getElementById("google-map");
     if (o) {
         include('//maps.google.com/maps/api/js?sensor=false');
-        /*include('//maps.googleapis.com/maps/api/js?key=AIzaSyAIHVl-6mpjahsx219BNVPZcLDF7SBtv_U&callback=initMap');*/
+        include('//maps.googleapis.com/maps/api/js?key=AIzaSyAIHVl-6mpjahsx219BNVPZcLDF7SBtv_U&callback=googleMap');
         
-        include('js/jquery.rd-google-map.js');
+        /*include('js/jquery.rd-google-map.js');*/
 
         $(document).ready(function () {
             var o = $('#google-map');
             if (o.length > 0) {
-                o.googleMap({
-                        styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
-                    }
-
-                );
+                o.googleMap();
             }
         });
     }
