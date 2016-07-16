@@ -43,7 +43,7 @@ function isIE() {
        /* include('//maps.google.com/maps/api/js?sensor=false');*/
         include('//maps.googleapis.com/maps/api/js?key=AIzaSyAIHVl-6mpjahsx219BNVPZcLDF7SBtv_U');
         
-        /*include('js/jquery.rd-google-map.js');*/
+        include('js/jquery.rd-google-map.js');
 
         $(document).ready(function () {
             var o = $('#google-map');
