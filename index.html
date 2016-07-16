@@ -8,71 +8,6 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-<style>
-.map_model {
-height: 416px; }
-.map_model img {
-max-width: none !important; }
-@media (max-width: 767px) {
-.map_model {
-height: 250px; } }
-@media (max-width: 479px) {
-.map_model {
-height: 200px; } }
-.map_locations {
-display: none; }
-
-.modalDialog {
-position: fixed;
-font-family: Arial, Helvetica, sans-serif;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background: rgba(F,0,0,0.8);
-z-index: 99999;
-opacity:0;
--webkit-transition: opacity 400ms ease-in;
--moz-transition: opacity 400ms ease-in;
-transition: opacity 400ms ease-in;
-pointer-events: none;
-border: 2;
-}
-
-.modalDialog:target {
-opacity:1;
-pointer-events: auto;
-overflow: auto;
-}
-
-.modalDialog > div {
-width: 50%;
-position: relative;
-margin: 10% auto;
-padding: 5px 20px 13px 20px;
-border-radius: 10px;
-background: #fff;
-}
-
-.close {
-background: #606061;
-color: #FFFFFF;
-line-height: 25px;
-position: absolute;
-right: -12px;
-text-align: center;
-top: -10px;
-width: 24px;
-text-decoration: none;
-font-weight: bold;
-border-radius: 12px;
--moz-border-radius: 12px;
--moz-box-shadow: 1px 1px 3px #000;
-box-shadow: 1px 1px 3px #000;
-}
-
-.close:hover { background: #00d9ff; }
-</style>
 <link rel="stylesheet" href="css/grid.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -81,10 +16,11 @@ box-shadow: 1px 1px 3px #000;
 
 <script src="js/jquery-3.0.0.min.js"></script>
 <script src='js/device.min.js'></script>
+<script src='js/jquery.rd-google-map.js'></script>
 <div class="page">
 
 <header>
-<img src="images/univereklogo_przezroczystetło.png" alt="Uniwerek" class="img-responsive center-block" width="2206" height="861"/>
+<img src="images/univereklogo_przezroczystetło.png" alt="Uniwerek" class="img-responsive center-block" width="2206" height="861">
 </header>
 
 <main>
@@ -193,7 +129,7 @@ wyżywienie zgodne z normami fizjologicznymi
 <div class="row row-off col-fix">
 <div class="col-md-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.2s">
 <div class="img-wr">
-<img src="images/ZadbalismyOProfesjonalnaKoncepcje.jpg" alt=""/>
+<img src="images/ZadbalismyOProfesjonalnaKoncepcje.jpg" alt="Koncepcja" width="270" height="180"/>
 
 </div>
 <h6>
@@ -203,7 +139,7 @@ wyżywienie zgodne z normami fizjologicznymi
 </div>
 <div class="col-md-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.4s">
 <div class="img-wr">
-<img src="images/StworzylismyUniwerk.jpg" alt=""/>
+<img src="images/StworzylismyUniwerk.jpg" alt="Koncepcja" width="270" height="180"/>
 </div>
 <h6>
 <span class="primary">Stworzyliśmy „Uniwerek” z myślą o najpełniejszym rozwoju Maluchów</span>
@@ -212,7 +148,7 @@ wyżywienie zgodne z normami fizjologicznymi
 </div>
 <div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.6s">
 <div class="img-wr">
-<img src="images/WspolnieDziałamyNaRzeczDziecka.jpg" alt=""/>
+<img src="images/WspolnieDziałamyNaRzeczDziecka.jpg" alt="Koncepcja" width="270" height="180"/>
 </div>
 <h6>
 <span class="primary">Wspólnie działamy na rzecz dziecka</span><br>
@@ -221,7 +157,7 @@ wyżywienie zgodne z normami fizjologicznymi
 </div>
 <div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.8s">
 <div class="img-wr">
-<img src="images/WspomagamyProcesUczeniaSiePrzezZabawe.jpg" alt=""/>
+<img src="images/WspomagamyProcesUczeniaSiePrzezZabawe.jpg"  alt="Koncepcja" width="270" height="180"/>
 </div>
 <h6>
 <span class="primary">Wspomagamy proces uczenia się przez zabawę</span>
@@ -236,7 +172,7 @@ wyżywienie zgodne z normami fizjologicznymi
 <div class="row">
 <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
 <div class="event">
-<img src="images/DwieRaczkiMam.jpg" alt=""/>
+<img src="images/DwieRaczkiMam.jpg" alt="DwieRaczkiMam"  width="450" height="300"/>
 <div style="text-align: center">
 <h6>
 <span class="primary">Dwie rączki mam<br>zajęcia plastyczno-techniczne</span>
@@ -246,7 +182,7 @@ wyżywienie zgodne z normami fizjologicznymi
 </div>
 <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
 <div class="event">
-<img src="images/MuzykaDlaSmyka.jpg" alt=""/>
+<img src="images/MuzykaDlaSmyka.jpg" alt=""  width="448" height="300"/>
 <div style="text-align: center">
 <h6>
 <span class="primary">Muzyka dla Smyka<br>zajęcia muzyczno-ruchowe</span>
@@ -258,7 +194,7 @@ wyżywienie zgodne z normami fizjologicznymi
 <div class="row">
 <div class="col-sm-6 off1 wow fadeIn" data-wow-delay="0.6s">
 <div class="event">
-<img src="images/CiszkiSyczkiSzumki.jpg" alt=""/>
+<img src="images/CiszkiSyczkiSzumki.jpg" alt=""  width="580" height="379"/>
 <div style="text-align: center">
 <h6>
 <span class="primary">Ciszki, syczki, szumki<br>zajęcia logopedyczne</span>
@@ -268,7 +204,7 @@ wyżywienie zgodne z normami fizjologicznymi
 </div>
 <div class="col-sm-6 off1 wow fadeIn" data-wow-delay="0.8s">
 <div class="event">
-<img src="images/EntliczekPentliczek.jpg" alt=""/>
+<img src="images/EntliczekPentliczek.jpg" alt=""  width="570" height="380"/>
 <div style="text-align: center">
 <h6>
 <span class="primary">Entliczek-pentliczek<br>zajęcia literackie, małe formy teatralne</span>
