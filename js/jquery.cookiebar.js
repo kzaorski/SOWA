@@ -23,9 +23,9 @@
 			var doReturn = false;
 		}
 		var defaults = {
-			message: 'We use cookies to track usage and preferences.', //Message displayed on bar
+			message: 'Używamy ciastek tylko do śledzenia wykorzystania strony :)',//'We use cookies to track usage and preferences.', //Message displayed on bar
 			acceptButton: true, //Set to true to show accept/enable button
-			acceptText: 'I Understand', //Text on accept/enable button
+			acceptText: 'Rozumiem',//'I Understand', //Text on accept/enable button
 			acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, //Function to run after accept
 			declineButton: false, //Set to true to show decline/disable button
 			declineText: 'Disable Cookies', //Text on decline/disable button
