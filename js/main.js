@@ -61,8 +61,7 @@ function isIE() {
     var o = document.getElementById("google-map");
     if (o) {
        /* include('//maps.google.com/maps/api/js?sensor=false');*/
-        include('https://maps.googleapis.com/maps/api/js?key=AIzaSyAIHVl-6mpjahsx219BNVPZcLDF7SBtv_U');
-        
+        include('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ');
         include('js/jquery.rd-google-map.js');
 
         $(document).ready(function () {
