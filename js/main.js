@@ -19,7 +19,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 });
 
 function include(scriptUrl) {
-    document.write('<script src="' + scriptUrl + '"></script>');
+    document.write('<script src="' + scriptUrl + '" async></script>');
 }
 
 function isIE() {
