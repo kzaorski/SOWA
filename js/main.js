@@ -21,7 +21,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 function include(scriptUrl) {
     document.write('<script src="' + scriptUrl + '"></script>');
 }
-
+function includeasync(scriptUrl) {
+    document.write('<script async defer src="' + scriptUrl + '"></script>');
+}
 function isIE() {
     var myNav = navigator.userAgent.toLowerCase();
     return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
@@ -61,8 +63,8 @@ function isIE() {
     var o = document.getElementById("google-map");
     if (o) {
        /* include('//maps.google.com/maps/api/js?sensor=false');*/
-        include('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ');
-        include('js/jquery.rd-google-map.js');
+        includeasync('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ');
+        includeasync('js/jquery.rd-google-map.js');
 
         $(document).ready(function () {
             var o = $('#google-map');
