@@ -23,7 +23,7 @@
 			var doReturn = false;
 		}
 		var defaults = {
-			message: 'Używamy ciastek tylko do sprawdzenia wejścia na stronę :-)',//'We use cookies to track usage and preferences.', //Message displayed on bar
+			message: 'Używamy ciastek usługi Google Analytics do zliczenia unikalnego wejścia na stronę. Dane są zbierane w sposób zanonimizowany i zagregowany. Używamy ciastka usługi Cloudflare, aby w jak najkrótszym czasie dostarczyć Ci zawartość strony.',//'We use cookies to track usage and preferences.', //Message displayed on bar
 			acceptButton: true, //Set to true to show accept/enable button
 			acceptText: 'Rozumiem',//'I Understand', //Text on accept/enable button
 			acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, //Function to run after accept
