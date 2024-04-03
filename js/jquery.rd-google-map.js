@@ -94,7 +94,7 @@
                 markers = [];
 
             for (var i in options.locations) {
-                markers[i] = new google.maps.Marker(
+                markers[i] = new google.maps.marker.AdvancedMarkerElement(
                     {
                         position: new google.maps.LatLng(
                             parseFloat(options.locations[i].y),
