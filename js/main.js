@@ -67,7 +67,7 @@ function isIE() {
 (function ($) {
     var o = document.getElementById("google-map");
     if (o) {
-        includeAsync('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ&loading=async&callback=initMap');
+        includeAsync('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ&loading=async&callback=initMap&libraries=marker');
         includeAsync('js/jquery.rd-google-map.js');
     }
 })(jQuery);
