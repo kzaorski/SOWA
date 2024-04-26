@@ -18,24 +18,25 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	try { $('body').unmousewheel(); } catch( error ) {}
 });
 
-function include(scriptUrl) {
-    document.write('<script src="' + scriptUrl + '"></script>');
+function includeAsync(scriptUrl) {
+    return new Promise(function(resolve, reject) {
+        var script = document.createElement('script');
+        script.src = scriptUrl;
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
 }
-function includeasync(scriptUrl) {
-    document.write('<script async defer src="' + scriptUrl + '"></script>');
-}
+
 function isIE() {
     var myNav = navigator.userAgent.toLowerCase();
     return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 };
 
-
-/* PointerEvents
- ========================================================*/
-;
 (function ($) {
     if(isIE() && isIE() < 11){
-        include('js/pointer-events.js');
+        includeAsync('js/pointer-events.js');
         $('html').addClass('lt-ie11');
         $(document).ready(function(){
             PointerEventsPolyfill.initialize({});
@@ -43,9 +44,13 @@ function isIE() {
     }
 })(jQuery);
 
+(function ($) { 
+    includeAsync('js/rd-smoothscroll.min.js'); 
+})(jQuery);
+
 
 ;(function ($) { 
-    include('js/rd-smoothscroll.min.js'); 
+    includeAsync('js/rd-smoothscroll.min.js'); 
 })(jQuery);
 
 ;
@@ -62,32 +67,30 @@ function isIE() {
 (function ($) {
     var o = document.getElementById("google-map");
     if (o) {
-       /* include('//maps.google.com/maps/api/js?sensor=false');*/
-        include('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ');
-        include('js/jquery.rd-google-map.js');
-
-        $(document).ready(function () {
-            var o = $('#google-map');
-            if (o.length > 0) {
-                o.googleMap();
-            } 
-        });
+        includeAsync('https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS3if8IXgfOQS4YGRzdZNc05JrNNvTDQ&loading=async&callback=initMap');
+        includeAsync('js/jquery.rd-google-map.js');
     }
-})
-(jQuery);
+})(jQuery);
 
 /* WOW
  ========================================================*/
 ;
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('google-map'), {
+        zoom: 8,
+        center: {lat: -34.397, lng: 150.644}
+    });
+}
+
 (function ($) {
     var o = $('html');
 
     if ((navigator.userAgent.toLowerCase().indexOf('msie') == -1 ) || (isIE() && isIE() > 9)) {
         if (o.hasClass('desktop')) {
-            include('js/wow.js');
-
-            $(document).ready(function () {
-                new WOW().init();
+            includeAsync('js/wow.js').then(function() {
+                $(document).ready(function () {
+                    new WOW().init();
+                });
             });
         }
     }
@@ -138,11 +141,11 @@ var ua = navigator.userAgent.toLocaleLowerCase(),
     result = ua.match(regV),
     userScale = "";
 if (!result) {
-    userScale = ",user-scalable=0"
+    userScale = ",user-scalable=1"
 }
 document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0' + userScale + '">');
 
 ;
 (function ($) {
-    include('js/jquery.-parallax.js');
+    includeAsync('js/jquery.-parallax.js');
 })(jQuery);
