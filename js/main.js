@@ -82,7 +82,7 @@ function initMap() {
         center: myLatLng,
 	    mapId: "30ee2ef7615e6de1",
     });
-	new google.maps.AdvancedMarkerElement({
+	const marker = new google.maps.marker.AdvancedMarkerElement({
     position: myLatLng,
     map,
     title: "Uniwerek",
