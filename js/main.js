@@ -76,10 +76,16 @@ function isIE() {
  ========================================================*/
 ;
 function initMap() {
+	const myLatLng = { lat: 53.755473, lng: 20.459818 };
     var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 15,
-        center: {lat: 53.755473, lng: 20.459818}
+        center: myLatLng,
     });
+	new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Uniwerek",
+  });
 }
 
 (function ($) {
