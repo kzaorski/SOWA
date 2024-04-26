@@ -80,8 +80,9 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('google-map'), {
         zoom: 15,
         center: myLatLng,
+	    mapId: 30ee2ef7615e6de1,
     });
-	new google.maps.Marker({
+	new google.maps.AdvancedMarkerElement({
     position: myLatLng,
     map,
     title: "Uniwerek",
