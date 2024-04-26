@@ -77,8 +77,8 @@ function isIE() {
 ;
 function initMap() {
     var map = new google.maps.Map(document.getElementById('google-map'), {
-        zoom: 8,
-        center: {lat: -34.397, lng: 150.644}
+        zoom: 15,
+        center: {lat: 53.755473, lng: 20.459818}
     });
 }
 
