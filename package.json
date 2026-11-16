@@ -1,0 +1,11 @@
+{
+  "name": "uniwerek-www",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Statyczna strona Uniwerek – opieka dzienna dla dzieci, Olsztyn Kortowo",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test tests/"
+  },
+  "engines": { "node": ">=18" }
+}
