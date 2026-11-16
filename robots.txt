@@ -1,4 +1,4 @@
-Sitemap: http://uniwerek.edu.pl/sitemap.xml
-
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://uniwerek.edu.pl/sitemap.xml
