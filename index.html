@@ -48,6 +48,28 @@
     "addressLocality": "Olsztyn",
     "addressCountry": "PL"
   },
+  "@id": "https://uniwerek.edu.pl/#placowka",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+      ],
+      "opens": "07:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "https://schema.org/PublicHolidays",
+      "opens": "00:00",
+      "closes": "00:00",
+      "description": "Placówka jest nieczynna w dni ustawowo wolne od pracy w Polsce."
+    }
+  ],
   "geo": { "@type": "GeoCoordinates", "latitude": 53.755972, "longitude": 20.459889 },
   "parentOrganization": { "@type": "Organization", "name": "Stowarzyszenie Oświata – Wychowanie – Aktywizacja „SOWA”" },
   "sameAs": ["https://www.facebook.com/uniwerekolsztyn"]
