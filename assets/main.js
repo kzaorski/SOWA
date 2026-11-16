@@ -62,7 +62,7 @@
     mapBtn.addEventListener('click', () => {
       const box = document.querySelector('[data-map]');
       const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.google.com/maps?q=53.755473,20.459818&z=16&hl=pl&output=embed';
+      iframe.src = 'https://www.google.com/maps?q=53.755972,20.459889&z=16&hl=pl&output=embed';
       iframe.title = 'Mapa dojazdu do Uniwerku, ul. Michała Oczapowskiego 9, Olsztyn';
       iframe.loading = 'lazy';
       iframe.referrerPolicy = 'no-referrer-when-downgrade';
